@@ -1,0 +1,35 @@
+MEDIA PLAYER:
+
+- react front-end, json server backend
+
+Features:
+---------
+ > add youtube videos
+ > view added youtube videos
+ > delete added youtube videos
+ > add categories
+ > view added categories
+ > delete categories
+ > add videos to categories
+ > view watch history
+
+-> React Bootstrap
+    > to install - npm i react-bootstrap bootstrap
+    > https://bootswatch.com/ for downloading free bootsrap themes and 
+    > cut/paste the downloaded file into src folder
+    > import into App.jsx file
+
+Components for the Project
+---------------------------
+
+
+JSON Server Creation
+---------------------
+    > Create a folder inside your project for server
+    > Open the folder and open cmd
+    > give command "npm init -y"
+    > give command "npm i" for node modules
+    > install json-server "npm i json-server"
+    > open the whole file in vs code
+    > create index.js file
+    > Import json server into index.js => const jsonserver = require('json-server');
