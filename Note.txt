@@ -33,3 +33,6 @@ JSON Server Creation
     > open the whole file in vs code
     > create index.js file
     > Import json server into index.js => const jsonserver = require('json-server');
+
+    https://www.youtube.com/watch?v=RLzC55ai0eo -> watch url
+    https://www.youtube.com/embed/RLzC55ai0eo?autoplay=1 -> embed url

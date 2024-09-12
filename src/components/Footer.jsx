@@ -16,7 +16,7 @@ function Footer() {
             <div className='d-flex flex-column'>
               <Link to={'/'}>Landing</Link>
               <Link to={'/home'}>Home</Link>
-              <Link to={'/history'}>Hinstory</Link>
+              <Link to={'/history'}>History</Link>
             </div>
           </Col>
           <Col sm={12} md={5}>

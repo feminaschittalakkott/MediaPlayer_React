@@ -62,7 +62,7 @@ function Landing() {
             <p style={{textAlign: 'justify'}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, neque ipsa. Laborum enim quaerat architecto, fuga, nam, consectetur corrupti dolor ratione possimus dolorem commodi ex perferendis ipsum. Laborum, ratione reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, recusandae laborum. In culpa vero dicta sed molestiae odit maxime eaque voluptates, dolores reprehenderit impedit doloremque debitis suscipit quod id quos.</p>
           </Col>
           <Col sm={12} md={5}>
-          <iframe width="500" height="391" src="https://www.youtube.com/embed/lAFbKzO-fss" title="React JS Full Course 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="100%" height="391" src="https://www.youtube.com/embed/lAFbKzO-fss" title="React JS Full Course 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </Col>
         </Row>
       </div>
