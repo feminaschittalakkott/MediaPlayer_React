@@ -23,3 +23,15 @@ export const getCategories=async()=>{
 export const deleteCategory=async(id)=>{
     return await axios.delete(`http://localhost:3000/category/${id}`)
 }
+
+export const addHistory=async(data)=>{
+    return await axios.post('http://localhost:3000/history', data)
+}
+
+export const getHistory=async()=>{
+    return await axios.get('http://localhost:3000/history')
+}
+
+export const deleteHistory=async(id)=>{
+    return await axios.delete(`http://localhost:3000/history/${id}`)
+}

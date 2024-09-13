@@ -16,6 +16,7 @@ function Category() {
     ctitle: "",
     videos: []
   });
+  const [addRes, setAddRes] = useState("");
 
   const handleAddCat = async () => {
     console.log(category)
@@ -34,6 +35,7 @@ function Category() {
             ctitle: "",
             videos: []
           })
+          setAddRes(res)
         }
         else {
           toast.error("Category adding failed !")
@@ -73,7 +75,7 @@ function Category() {
           <Button variant="primary" onClick={handleAddCat}>Add</Button>
         </Modal.Footer>
       </Modal>
-      <CategoryList add={category} />
+      <CategoryList add={addRes} />
     </>
   )
 }
