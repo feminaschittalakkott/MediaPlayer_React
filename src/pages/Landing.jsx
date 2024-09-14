@@ -12,7 +12,7 @@ function Landing() {
             <h2><i className="fa-solid fa-video" style={{ color: "#9933CC" }}></i> Media Player 2024</h2>
             <p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eaque, dicta labore enim, soluta ipsa laboriosam omnis iure modi natus ducimus, aliquid neque mollitia consequuntur animi quidem totam reprehenderit harum.</p>
             <div className='d-grid'>
-              <Link to="/home" className='btn btn-info'>Let's Go</Link>
+              <Link to="/login" className='btn btn-info'>Let's Go</Link>
             </div>
           </Col>
           <Col sm={12} md={5}>

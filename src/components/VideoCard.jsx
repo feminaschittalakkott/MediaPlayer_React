@@ -6,7 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import { deleteVideo, addHistory } from '../services/allApis';
 import { toast } from 'react-toastify';
 
-function VideoCard({ video, delresponse }) {
+function VideoCard({ video, delresponse, cat }) {
 
     const [show, setShow] = useState(false);
 
@@ -30,15 +30,24 @@ function VideoCard({ video, delresponse }) {
         }
     }
 
+    const dragHandler=(e)=>{
+        console.log(e)
+        console.log(video)
+        e.dataTransfer.setData("video", JSON.stringify(video))
+    }
+
     return (
         <>
-            <Card className='my-3' style={{ width: '18rem' }}>
+            <Card className='my-3' style={cat ?{ width: '100%' } : { width: '18rem' }} onDragStart={(e)=>{dragHandler(e)}} draggable>
                 <Card.Img style={{ cursor: "pointer" }} onClick={handleShow} variant="top" src={video?.imgurl} />
                 <Card.Body>
                     <Card.Title>{video?.title}</Card.Title>
+                    {
+                        !cat &&
                     <Button variant='btn' onClick={handleDelete}>
                         <i className="fa-solid fa-trash" style={{ color: "#f70808", }} />
                     </Button>
+                    }
                 </Card.Body>
             </Card>
             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
