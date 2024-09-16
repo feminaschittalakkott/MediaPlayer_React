@@ -23,8 +23,14 @@ function Login() {
             console.log(res)
             if(res.status == 200){
                 if(res.data.length > 0){
+                    console.log(res.data[0])
+                    sessionStorage.setItem("userData", JSON.stringify(res.data[0]))
                     toast.success("Login success !")
                     nav('/home')
+                    setUser({
+                        email: "",
+                        password: ""
+                    })
                 }
                 else{
                     toast.warning("Invalid email or password !")
@@ -40,7 +46,7 @@ function Login() {
   return (
     <>
         <div className='d-flex justify-content-center align-items-center' style={{height:'80vh'}}>
-            <div className='w-25 border shadow bg-light p-4'>
+            <div className='w-50 border shadow bg-light p-4'>
                 <h1 className='text-center'>Login</h1>
                 <br/>
                 <input type="text" className='form-control mb-3' placeholder='Enter Email' onChange={(e)=>{setUser({...user, email: e.target.value})}} />

@@ -1,8 +1,17 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+
+  const nav = useNavigate()
+
+  const logginOut=()=>{
+    nav('/')
+    sessionStorage.removeItem("userData")
+  }
+
   return (
     <>
     <Navbar className="bg-body-tertiary">
@@ -13,6 +22,10 @@ function Header() {
             <b>Media Player</b>
           </Navbar.Brand>
         </Container>
+        {
+          sessionStorage.getItem("userData") &&
+            <button className='btn btn-info' onClick={logginOut}>Logout</button>
+        }
       </Navbar>
     </>
   )

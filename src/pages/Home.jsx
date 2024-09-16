@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Row, Col } from 'react-bootstrap'
 import AddVideo from '../components/AddVideo'
 import Videos from '../components/Videos'
@@ -9,8 +9,16 @@ function Home() {
 
   const [addResponse, setAddResponse] = useState("");
 
+  const [username, setUsername] = useState("")
+
+  useEffect(()=>{
+    const user = JSON.parse(sessionStorage.getItem("userData"))
+    setUsername(user?.username)
+  }, [])
+
   return (
     <>
+      <h6 className='p-2'>Welcome {username}</h6>
       <div className='d-flex justify-content-between p-3'>
         <h3>Videos</h3>
         <Link to={'/History'}>Watch History</Link>
